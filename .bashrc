@@ -82,7 +82,7 @@ if ${use_color} ; then
 else
 	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors
-		PS1='\u@\h \W \$ '
+		PS1='\u@\h \w \$ '
 	else
 		PS1='\u@\h \w \$ '
 	fi
@@ -145,3 +145,7 @@ export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1
 ################### OWN MODIFICATIONS ##################################
 ########################################################################
 alias cmus='screen -q -r -D cmus || screen -S cmus $(which cmus)'
+
+
+#For LFS
+export LFS=/mnt/lfs
