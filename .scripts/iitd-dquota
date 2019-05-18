@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Run this script when you get a disk quota limit exceeded warning.
+# Should have IITD_USERNAME as kerberos ID
+
+ssh -l $IITD_USERNAME ssh1.iitd.ac.in 'echo "Current Usage: $( quota | tail -1 | tr -s " " | cut -d" " -f2 )"
+rm -rf .mozilla
+rm -rf .cache
+echo "Final Usage: $( quota | tail -1 | tr -s " " | cut -d" " -f2 )"'
