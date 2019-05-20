@@ -62,7 +62,9 @@ bindsym $mod+F3 exec terminal -e ranger
 bindsym $mod+Shift+F3 exec terminal -e sudo ranger
 
 set $cmus 'screen -q -r -D cmus || screen -S cmus $(which cmus)'
-bindsym $mod+F4 exec LANG=en_US.UTF-8 terminal -e $cmus
+bindsym $mod+F4 exec terminal -e $cmus
+
+bindsym $mod+F5 exec code
 
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
@@ -324,7 +326,7 @@ set_from_resource $term_color15    color15
 bar {
 	i3bar_command i3bar
 	status_command i3status
-	position bottom
+	position top
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 #	tray_output primary
