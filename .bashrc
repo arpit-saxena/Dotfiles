@@ -149,3 +149,7 @@ alias cmus='screen -q -r -D cmus || screen -S cmus $(which cmus)'
 
 #For LFS
 export LFS=/mnt/lfs
+
+echo "/home/arpit's .bashrc"
+
+eval $(thefuck --alias)

@@ -104,7 +104,7 @@ bindsym $mod+Shift+Right move right
 
 # workspace back and forth (with/without active container)
 workspace_auto_back_and_forth yes
-bindsym $mod+b workspace back_and_forth
+# bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
@@ -116,7 +116,7 @@ bindsym $mod+q split toggle
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -426,3 +426,16 @@ bindsym XF86AudioPlay exec ~/.scripts/cmus-play-toggle.sh
 bindsym XF86AudioStop exec cmus-remote --stop
 bindsym XF86AudioNext exec cmus-remote --next
 bindsym XF86AudioPrev exec cmus-remote --prev
+
+set $mode_brightness Brightness: [,] (fine), -,+ (very fine)
+mode "$mode_brightness" {
+	bindsym minus		exec brillo -q -U 2
+	bindsym equal		exec brillo -q -A 2
+	bindsym bracketleft	exec brillo -q -U 5
+	bindsym bracketright	exec brillo -q -A 5
+	bindsym Return		mode "default"
+	bindsym Escape		mode "default"
+} 
+
+bindsym $mod+b mode "$mode_brightness"
+
