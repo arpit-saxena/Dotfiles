@@ -57,13 +57,13 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec firefox
-bindsym $mod+shift+F2 exec tor-browser-en-us
+bindsym $mod+shift+F2 exec tor-browser
 #bindsym $mod+F3 exec pcmanfm
 bindsym $mod+F3 exec terminal -e ranger
 bindsym $mod+Shift+F3 exec terminal -e sudo ranger
 
 set $cmus 'screen -q -r -D cmus || screen -S cmus $(which cmus)'
-bindsym $mod+F4 exec terminal -e $cmus
+bindsym $mod+F4 exec terminal -e $cmus -t cmus
 
 bindsym $mod+F5 exec code
 
@@ -219,6 +219,7 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [title="cmus"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
