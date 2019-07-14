@@ -71,7 +71,7 @@ battery all {
 }
 
 cpu_temperature 0 {
-	format = " T: %degrees °C"
+	format = " 🌡 %degrees °C"
 }
 
 tztime local {
