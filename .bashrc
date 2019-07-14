@@ -153,3 +153,5 @@ export LFS=/mnt/lfs
 echo "/home/arpit's .bashrc"
 
 eval $(thefuck --alias)
+alias cs='cd /mnt/storage'
+alias f='fuck'
