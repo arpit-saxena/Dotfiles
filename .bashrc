@@ -155,3 +155,6 @@ echo "/home/arpit's .bashrc"
 eval $(thefuck --alias)
 alias cs='cd /mnt/storage'
 alias f='fuck'
+
+source /usr/share/fzf/completion.bash
+source /usr/share/fzf/key-bindings.bash
